@@ -12,9 +12,9 @@ const MONGO_OPTIONS = {
     retryWrites: false
 };
 
-const MONGO_USERNAME = process.env.MONGO_USERNAME || 'admin-sheik';
-const MONGO_PASSWORD = process.env.MONGO_USERNAME || 'jnt3KtgndC2bFpv9';
-const MONGO_HOST = process.env.MONGO_URL || `stp-data.bmhdg.mongodb.net/stp-data`;
+const MONGO_USERNAME = process.env.MONGO_USERNAME;
+const MONGO_PASSWORD = process.env.MONGO_PASSWORD;
+const MONGO_HOST = process.env.MONGO_URL
 
 
 
@@ -23,7 +23,7 @@ const MONGO = {
     password: MONGO_PASSWORD,
     username: MONGO_USERNAME,
     options: MONGO_OPTIONS,
-    url: `mongodb+srv://admin-sheik:jnt3KtgndC2bFpv9@stp-data.bmhdg.mongodb.net/gameChange?retryWrites=true&w=majority`
+    url: process.env.MONGO_URL
 };
 
 const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME || 'localhost';
